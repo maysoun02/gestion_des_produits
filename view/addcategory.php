@@ -299,7 +299,7 @@
               -->
             <div class="card sidebar-menu">
               <div class="card-header">
-                <h3 class="h4 card-title">Customer section</h3>
+                <h3 class="h4 card-title">Admin section</h3>
               </div>
               <div class="card-body">
                 <ul class="nav nav-pills flex-column"><a href="addproduct.php" class="nav-link active"><i
