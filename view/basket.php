@@ -307,7 +307,6 @@ $abs = $userController->AfficherAbonnements();
                   <thead>
                     <tr>
                       <th>Username</th>
-                      <th>Password</th>
                       <th>Role</th>
                     </tr>
                   </thead>
@@ -317,9 +316,7 @@ $abs = $userController->AfficherAbonnements();
                         <td>
                           <?php echo $user->getUsername(); ?>
                         </td>
-                        <td>
-                          <?php echo $user->getPass(); ?>
-                        </td>
+                      
                         <td>
                           <?php echo $user->getRoles(); ?>
                         </td>
@@ -331,9 +328,7 @@ $abs = $userController->AfficherAbonnements();
             </div>
             
           </div>
-              <div class="col-md-12 text-right">
-                <a href="register.php" class="btn btn-primary"> Register a new user</a>
-              </div>
+             
             </div>
           </tbody>
           </table>

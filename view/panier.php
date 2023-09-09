@@ -307,11 +307,13 @@ $abs = $panierController->AfficherPanier();
                   <thead>
                     <tr>
                       <th>id du poduit</th>
-                      <th>quantité</th>
+                      <th>quantite</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($abs as $panier): ?>
+                    <?php 
+                    if ($abs !== null) :
+                    foreach ($abs as $panier): ?>
                       <tr>
                       <td>
                           <?php echo $panier->getProduitId(); ?>
@@ -321,7 +323,13 @@ $abs = $panierController->AfficherPanier();
                         </td>
                         
                       </tr>
-                    <?php endforeach; ?>
+                      <?php endforeach; 
+                      else :
+                    ?>
+                    aucune product dans le panier
+                    <?php endif; 
+                     
+                    ?>
                   </tbody>
               </div>
             </div>

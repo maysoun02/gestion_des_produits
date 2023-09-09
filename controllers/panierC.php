@@ -31,6 +31,8 @@ class panierC
     }
 
 
+
+
     public function AfficherPanier()
     {
         $sql = 'SELECT * FROM `panier`';
@@ -38,12 +40,12 @@ class panierC
 
         try {
             $stmt = $db->query($sql);
-            $produits = array(); // Initialize an array to store produit objects
+            $paniers = array(); // Initialize an array to store produit objects
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 // Create a new produit object for each row of data
                 $panier = new panier($row['produit_id'], $row['quantity']);
-                $paniers[] = $panier; // Add the produit object to the array
+                $paniers [] = $panier; // Add the produit object to the array
             }
 
             return $paniers; // Return the array of produit objects
@@ -51,7 +53,6 @@ class panierC
             die('Erreur: ' . $e->getMessage());
         }
     }
-
 
 
 }

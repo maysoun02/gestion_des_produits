@@ -301,7 +301,7 @@ $abs = $categoryController->AfficherCategory();
           </div>
           <div id="basket" class="col-lg-9">
             <div class="box">
-              <h1>Porducts List</h1>
+              <h1>Category List</h1>
               <div class="table-responsive">
                 <table class="table">
                   <thead>
@@ -312,7 +312,9 @@ $abs = $categoryController->AfficherCategory();
                     </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($abs as $category): ?>
+                    <?php 
+                    if ($abs !== null) :
+                    foreach ($abs as $category): ?>
                       <tr>
                       <td>
                           <?php echo $category->getId(); ?>
@@ -325,7 +327,13 @@ $abs = $categoryController->AfficherCategory();
                         <a class="btn btn-danger m-1"  href="supprimercategory.php?id=<?php echo $category->getId(); ?>" >supprimer</a>
                         </td>
                       </tr>
-                    <?php endforeach; ?>
+                    <?php endforeach; 
+                      else :
+                    ?>
+                    aucune category
+                    <?php endif; 
+                     
+                    ?>
                   </tbody>
 
               </div>

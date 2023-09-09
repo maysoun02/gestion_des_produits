@@ -314,7 +314,8 @@ $abs = $produitController->AfficherProduit();
                     </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($abs as $produit): ?>
+                    <?php 
+                    foreach ($abs as $produit): ?>
                       <tr>
                       <td>
                           <?php echo $produit->getId(); ?>
@@ -333,7 +334,7 @@ $abs = $produitController->AfficherProduit();
                         <a class="btn btn-danger m-1"  href="supprimerproduit.php?id=<?php echo $produit->getId(); ?>" >supprimer</a>
                         </td>
                       </tr>
-                    <?php endforeach; ?>
+                    <?php  endforeach;?>
                   </tbody>
 
               </div>
